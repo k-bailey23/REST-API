@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Weather</title>
+</head>
+<body>
+    <!--Row Header titled Weather-->
+    <h1>Weather</h1>
+    <!--Horizontal Rule-->
+    <hr />
+    <div class="container">
+        <!--errors-->
+        <ul id="error-messages" class="list-group"></ul>
+        <!--controls-->
+        <form id="weather-form" class="form-horizontal">
+            <div class="form-group">
+                <!--Labels and file for Zipcode-->
+                <label for="zipcode" class="col-xs-2 control-label">Zip code:</label>
+                <div class="col-xs-2">
+                    <input id="zipcode" type="text"
+                           required pattern='\d{5}' placeholder="00000"
+                           class="form-control" />
+                </div>
+                <!--Label and file for Units-->
+                <label for="units" class="col-xs-1 control-label">Units:</label>
+                <div class="col-xs-2">
+                    <select id="units" class="form-control">
+                        <option value="imperial">Imperial</option>
+                        <option value="metric">Metric</option>
+                    </select>
+                </div>
+                <!--Button titled Get Weather-->
+                <div class="col-xs-3">
+                    <button type="button" class="form-control"
+                            onclick="displayResults()">Get Weather</button>
+                </div>
+            </div>
+        </form>
+        <hr />
+        <!--conditions-->
+        <div id="conditions">
+            <!--Cuttent Conditions in |City|-->
+            <h2>Current conditions placeholder</h2>
+            <div class="row">
+            <!--Contect block divided into two vertical columns-->
+                <!--Left Column-->
+                <div id="image"class="col-xs-6">
+                    <span>
+                        <!--Icon for current conditions in left column-->
+                        <img id="conditions-icon">
+                    </span>
+                    <!--Description for current conditions in left column-->
+                    <span id="conditions-description"></span>
+                </div>
+                <!--Right Column-->
+                <div class="col-xs-6">
+                    <div>
+                        <!--Label and span for Temperature-->
+                        <label for="temperature">Temperature:</label>
+                        <span id="temperature"></span>
+                    </div>
+                    <div>
+                        <!--Label and span for Humidity-->
+                        <label for="humidity">Humidity:</label>
+                        <span id="humidity"></span>
+                    </div>
+                    <div>
+                        <!--Label and span for Wind-->
+                        <label for="wind">Wind:</label>
+                        <span id="wind"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--forecast-->
+        <div id="forecast">
+            <!--Header for Five Day Forecast-->
+            <h2>Five Day Forecast</h2>
+            <table class="table table-striped">
+                <tr id="date-row"></tr><!--Date Row-->
+                <tr id="summary-row"></tr><!--Weather type and Description row-->
+                <tr id="high-row"></tr><!--High temp row-->
+                <tr id="low-row"></tr><!--Low temp row-->
+            </table>
+        </div>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
