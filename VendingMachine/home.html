@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <title>Vending Machine</title>
+	
+	
+</head>
+<body>
+
+	
+		<h1 style="text-align: center"> VendingMachine</h1>
+		<hr/>
+		
+		<ul class="list-group" id="error-messages"></ul>
+		<div class="container">
+        <div class="row">
+            <!--<div class="row justify-content-center" id="snacksDiv">-->
+            <div class="col-md-9" id="content-rows">
+                
+            </div>
+            
+            <div class="col-md-3">
+                <!-- Form 1: Add Money -->
+                <form id="money-inserted-form">
+                    
+                    <div class="form-group text-center">
+                        <label for="money-inserted" style="font-size:24px">
+                            Total $ In
+                        </label>
+                        <input type="text" class="form-control" id="money-inserted" placeholder="0.00" readonly>
+                        <ul class="list-group" id="input-1-error-nessage"></ul>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="row text-center">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default" id="add-dollar">
+                                    Add Dollar
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default" id="add-quarter">
+                                    Add Quarter
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group"></div>
+                        <div class="row text-center">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default" id="add-dime">
+                                    Add Dime
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-default" id="add-nickel">
+                                    Add Nickel
+                                </button>
+                            </div>
+                        </div>
+                    
+                </form>
+                <hr>
+                
+                
+                <!-- Form 2: Messages -->
+                <form id="messages-form">
+                    <div class="form-group text-center">
+                        <label for="messages" style="font-size:24px">
+                            Messages
+                        </label>
+                        <input type="text" class="form-control" id="messages" readonly>
+                        <p></p>
+                        <label for="item" style="display:inline">
+                            Item:
+                        </label>
+                        <input type="text" class="form-control" id="item" style="width:75%;display:inline">
+                        <p></p>
+                        <ul class="list-group" id="input-2-error-message"></ul>
+                        <p></p>
+        
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default" id="make-purchase">
+                                Make Purchase
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default" id="clear">
+                                Clear/Cancel
+                            </button>
+                        </div>
+                        
+                    </div>
+                    
+                </form>
+                <hr>
+                
+                
+                
+                
+                <!-- Form 3: Change -->
+                <form id="change-form">
+                    <div class="text-center">
+                        <label for="change" style="font-size:24px">
+                            Change
+                        </label>
+                        <input type="text" class="form-control" id="change" readonly>
+                        <p></p>
+                        <button type="button" class="btn btn-default" id="change-return">
+                            Change Return
+                        </button>
+                    </div>
+                    
+                </form>
+            
+            </div>
+            
+        </div>
+
+	</div>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+    
+</html>
